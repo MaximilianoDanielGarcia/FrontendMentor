@@ -4,7 +4,7 @@
 
 ## Welcome! 👋
 
-![Desktop screenshot](./images/screenshot_desktop.png)
+![Desktop screenshot](./images/screenshot_desktop.PNG)
 
 ### Built with
 
