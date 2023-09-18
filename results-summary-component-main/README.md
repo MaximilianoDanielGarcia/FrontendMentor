@@ -10,8 +10,8 @@
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution Code Here](https://github.com/MaximilianoDanielGarcia/FrontendMentor/tree/master/results-summary-component-main)
+- [Live Site Here](https://frontend-mentor-n29z.vercel.app/)
 
 ### Built with
 
