@@ -4,7 +4,7 @@
 
 ## Welcome! 👋
 
-![Desktop screenshot](./images/screenshot_desktop.png)
+![Desktop screenshot](./images/screenshot_desktop.PNG)
 
 ### Built with
 
@@ -14,4 +14,4 @@
 
 ## Project deployed 🚀
 
-![Live site URL here](https://frontend-mentor-coral-one.vercel.app/)
+[Live site URL here](https://frontend-mentor-coral-one.vercel.app/)
