@@ -1,0 +1,220 @@
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    --light-slate-blue-bg: hsl(252, 100%, 67%);
+    --light-royal-blue-bg: hsl(241, 81%, 54%);
+
+    --violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 10px 25px 30px hsla(241, 100%, 89%, 0.3);
+    border-radius: 30px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 3.5rem;
+    background-image: linear-gradient(var(--light-slate-blue-bg), var(--light-royal-blue-bg));
+    color: var(--light-lavender);
+    border-radius: 30px;
+    max-width: 375px;
+}
+
+.result h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.total-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(var(--violet-blue-circle), var(--persian-blue-circle));
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    width: 200px;
+    text-align: center;
+    color: hsla(241, 100%, 89%, 0.5);
+}
+
+.score {
+    font-size: 4.5rem;
+    color: var(--white);
+    font-weight: 800;
+}
+
+.info-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    color: hsla(241, 100%, 89%, 0.9);
+    padding-bottom: 1.5rem;
+}
+
+.subtitle {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.summary {
+    height: 100%;
+    width: 375px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 2.5rem;
+    max-width: 375px;
+}
+
+.summary h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark-gray-blue);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detail-result {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.detail-result span {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    font-weight: 500;
+}
+
+.detail-result:nth-of-type(1) {
+    background-color: hsla(0, 100%, 67%, 0.1);
+    color: hsl(0, 100%, 67%);
+}
+
+.detail-result:nth-of-type(2) {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    color: hsl(39, 100%, 56%);
+}
+
+.detail-result:nth-of-type(3) {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    color: hsl(166, 100%, 37%);
+}
+
+.detail-result:nth-of-type(4) {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    color: hsl(234, 85%, 45%);
+}
+
+.points {
+    color: hsla(224, 30%, 27%, 0.5);
+    font-weight: 800;
+}
+
+.points b {
+    color: var(--dark-gray-blue);
+}
+
+button {
+    border: none;
+    background: hsl(224, 30%, 27%);
+    color: var(--pale-blue);
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background-image: linear-gradient(var(--light-slate-blue-bg), var(--light-royal-blue-bg));
+    cursor: pointer;
+}
+
+@media (width <= 375px){
+    main {
+        grid-template-columns: 1fr ;
+    }
+
+    .result {
+        border-radius: 0px 0px 30px 30px;
+        font-size: 1rem;
+    }
+
+    .result h1 {
+        font-size: 1.3rem;
+    }
+
+    .total-score {
+        width: 150px;
+    }
+
+    .score {
+        font-size: 3.5rem;
+    }
+
+    .info-result {
+        padding-bottom: 1rem;
+    }
+
+    .subtitle {
+        font-size: 1.7rem;
+    }
+
+    .summary {
+        gap: 2rem;
+    }
+
+    .summary h2 {
+        font-size: 1.3rem;
+    }
+}
