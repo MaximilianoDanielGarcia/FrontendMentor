@@ -14,4 +14,4 @@
 
 ## Project deployed 🚀
 
-![Live site URL here](https://frontend-mentor-coral-one.vercel.app/)
+[Live site URL here](https://frontend-mentor-coral-one.vercel.app/)
