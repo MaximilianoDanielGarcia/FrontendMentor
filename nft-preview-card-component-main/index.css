@@ -1,0 +1,180 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --very-dark-blue-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: hsla(217, 54%, 11%, 0.994);
+    color: hsla(215, 51%, 70%, 0.8);
+    font-size: 18px;
+    font-family: 'Outfit';
+    font-weight: 300;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    background: var(--very-dark-blue-card);
+    padding: 25px;
+    width: 355px;
+    border-radius: 15px;
+    box-shadow: 16px 30px 5px #0c1729,
+                -16px 30px 5px #0c1729,
+                0px 45px 5px #0c1729,
+                0px -5px 15px #0c1729,
+                45px 55px 5px #0c192c,
+                -45px 55px 5px #0c192c,
+                0px 75px 10px #0c192c,
+                35px -20px 5px #0c192c,
+                40px -10px 5px #0c192c,
+                -35px -30px 5px #0c192c,
+                -40px -20px 5px #0c192c;
+    position: relative;
+}
+
+.card > img {
+    width: 305px;
+    min-width: 305px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card h2 {
+    color: var(--white);
+    font-size: 1.4rem;
+    padding-top: 10px;
+}
+
+.card h2:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    border-bottom: 1px solid var(--very-dark-blue-line);
+}
+
+.icon-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.icon-text > img {
+    width: 16px;
+}
+
+.eth {
+    color: var(--cyan);
+    font-weight: 700;
+}
+
+.eth > img {
+    width: 12px;
+}
+
+.creator {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    gap: 1rem;
+}
+
+.creator img {
+    width: 36px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.creator span {
+    color: var(--white);
+}
+
+.creator span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.view {
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    min-width: 305px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: hsla(178, 100%, 50%, 0.4);
+    top: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.view:hover {
+    opacity: 1;
+}
+
+@media (width <= 375px) {
+    
+    .card {
+        padding: 25px;
+        width: 325px;
+        min-width: 325px;
+        font-size: 1rem;
+    }
+
+    .card > img {
+        width: 275px;
+        height: 275px;
+        min-width: 275px;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+        padding-top: 10px;
+    }
+
+    .info {
+        padding-bottom: 20px;
+        padding-top: 5px;
+    }
+
+    .view {
+        width: 275px;
+        height: 275px;
+        min-width: 275px;
+        top: 1.5rem;
+    }
+
+    .creator {
+        padding-bottom: 0px;
+    }
+
+}
