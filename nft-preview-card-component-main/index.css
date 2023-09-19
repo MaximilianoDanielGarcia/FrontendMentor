@@ -18,11 +18,13 @@ body {
     display: grid;
     place-items: center;
     background: hsla(217, 54%, 11%, 0.994);
-    color: hsla(215, 51%, 70%, 0.8);
+    color: hsla(215, 51%, 70%, 0.9);
     font-size: 18px;
     font-family: 'Outfit';
     font-weight: 300;
     height: 100vh;
+    line-height: 1.6rem;
+    letter-spacing: 0.5px;
 }
 
 .card {
@@ -72,8 +74,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 25px;
-    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 5px;
     border-bottom: 1px solid var(--very-dark-blue-line);
 }
 
@@ -93,23 +95,24 @@ body {
 .eth {
     color: var(--cyan);
     font-weight: 700;
+    font-size: 1rem;
 }
 
 .eth > img {
-    width: 12px;
+    width: 11px;
 }
 
 .creator {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     font-size: 1rem;
     gap: 1rem;
 }
 
 .creator img {
-    width: 36px;
+    width: 32px;
     border: 1px solid var(--white);
     border-radius: 50%;
 }
