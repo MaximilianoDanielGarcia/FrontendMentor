@@ -1,0 +1,20 @@
+
+.container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  width: 855px;
+  height: 100%;
+  margin-left: 270px;
+}
+
+.box-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 210px;
+  column-gap: 285px;
+  width: 100%;
+  margin-top: 275px;
+
+}
