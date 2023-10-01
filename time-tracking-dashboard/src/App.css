@@ -15,6 +15,40 @@
   row-gap: 210px;
   column-gap: 285px;
   width: 100%;
-  margin-top: 275px;
+  margin-top: 275px; 
 
+}
+
+@media screen and (width <= 900px) {
+
+  .container {
+    margin-left: 270px;
+  }
+
+  .box-container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 234px;
+  }
+}
+
+@media screen and (width <= 600px) {
+
+  .container {
+    place-items: center;
+    grid-template-columns: 1fr;
+    min-width: 375px;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+  }
+
+  .box-container {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    width: 88%;
+    min-width: 325px;
+    row-gap: 184px;
+    margin-top: 200px;
+    padding-bottom: 70px;
+  }
 }

@@ -2,7 +2,7 @@ import './box-user.css';
 
 export function BoxUser({ setTimeFrame, timeFrame }) {
 
-    function handleClick(e){
+    function handleClick(e) {
         console.log(e.target.name);
         setTimeFrame(e.target.name);
     }
@@ -13,14 +13,16 @@ export function BoxUser({ setTimeFrame, timeFrame }) {
                 <picture>
                     <img src="../src/assets/images/image-jeremy.png" alt="Jeremy Robson photo" />
                 </picture>
-                <p>Report for</p>
-                <h1>Jeremy Robson</h1>
+                <div>
+                    <p>Report for</p>
+                    <h1>Jeremy Robson</h1>
+                </div>
             </div>
             <div className='frecuency'>
                 <ul>
-                    <li><a name="daily" className={ timeFrame === "daily" ? 'active' : ''} onClick={handleClick}>Daily</a></li>
-                    <li><a name="weekly" className={ timeFrame === "weekly" ? 'active' : ''} onClick={handleClick}>Weekly</a></li>
-                    <li><a name="monthly" className={ timeFrame === "monthly" ? 'active' : ''} onClick={handleClick}>Monthly</a></li>
+                    <li><a name="daily" className={timeFrame === "daily" ? 'active' : ''} onClick={handleClick}>Daily</a></li>
+                    <li><a name="weekly" className={timeFrame === "weekly" ? 'active' : ''} onClick={handleClick}>Weekly</a></li>
+                    <li><a name="monthly" className={timeFrame === "monthly" ? 'active' : ''} onClick={handleClick}>Monthly</a></li>
                 </ul>
             </div>
         </section>

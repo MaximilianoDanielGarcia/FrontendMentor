@@ -12,12 +12,14 @@ export function BoxHours ({hoursdata, timeFrame}) {
                         <img src="../src/assets/images/icon-ellipsis.svg" alt="Ellipsis icon" />
                     </picture>
                 </div>
-                <p className="hours">{hoursdata.timeframes[timeFrame].current}hrs</p>
-                {
-                    timeFrame === "daily" ?
-                    <p>Yesterday - {hoursdata.timeframes[timeFrame].previous}hrs</p> :
-                    <p>Last {timeFrame === "weekly" ? "Week" : "Month"} - {hoursdata.timeframes[timeFrame].previous}hrs</p>
-                }
+                <div className='datetime'>
+                    <p className="hours">{hoursdata.timeframes[timeFrame].current}hrs</p>
+                    {
+                        timeFrame === "daily" ?
+                        <p>Yesterday - {hoursdata.timeframes[timeFrame].previous}hrs</p> :
+                        <p>Last {timeFrame === "weekly" ? "Week" : "Month"} - {hoursdata.timeframes[timeFrame].previous}hrs</p>
+                    }
+                </div>
             </div>
         </div>
     )
