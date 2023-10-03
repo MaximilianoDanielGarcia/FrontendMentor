@@ -11,7 +11,7 @@ export function BoxUser({ setTimeFrame, timeFrame }) {
         <section className='user-container'>
             <div className='user-info'>
                 <picture>
-                    <img src="../src/assets/images/image-jeremy.png" alt="Jeremy Robson photo" />
+                    <img src="/image-jeremy.png" alt="Jeremy Robson photo" />
                 </picture>
                 <div>
                     <p>Report for</p>
