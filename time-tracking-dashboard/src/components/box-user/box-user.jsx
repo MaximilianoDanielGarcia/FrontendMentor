@@ -3,7 +3,6 @@ import './box-user.css';
 export function BoxUser({ setTimeFrame, timeFrame }) {
 
     function handleClick(e) {
-        console.log(e.target.name);
         setTimeFrame(e.target.name);
     }
 
