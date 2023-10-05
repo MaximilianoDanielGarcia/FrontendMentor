@@ -1,0 +1,277 @@
+:root {
+    /* Primary */
+
+    --orange: hsl(25, 97%, 53%);
+    --real-orange: hsl(26.15deg 96.69% 52.55%);
+    /* Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --real-dark-blue: hsl(215, 27%, 12%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --real-black: hsl(228, 11%, 9%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: var(--real-black);
+    font-size: 15px;
+    color: var(--medium-grey);
+    font-family: 'Overpass', sans-serif;
+}
+
+main {
+    background: radial-gradient(circle at 50% 0%, var(--dark-blue), var(--real-dark-blue) 70%);
+    border-radius: 30px;
+    width: 100%;
+    max-width: 410px;
+    min-height: 415px;
+    padding: 33px 37px 31px 31px;
+    box-shadow: -3px -3px 5px inset var(--medium-grey),
+    3px 3px 5px inset var(--very-dark-blue);
+}
+
+.rating-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rating-form picture {
+    display: grid;
+    place-items: center;
+    background: var(--dark-blue);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: -3px -3px 5px inset var(--medium-grey),
+    3px 3px 5px inset var(--very-dark-blue);
+}
+
+.rating-form h1 {
+    color: var(--white);
+    font-size: 1.72rem;
+    padding-top: 23px;
+}
+
+.rating-form p {
+    line-height: 1.5rem;
+    padding-bottom: 16px;
+}
+
+.rating-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 22.5px;
+}
+
+.rating-form form > div {
+    display: flex;
+    gap: 22.5px;
+    padding-bottom: 10px;
+}
+
+.rating-form form input[type="button"] {
+    text-align: center;
+    color: var(--light-grey);
+    background: var(--dark-blue);
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 50px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+    box-shadow: -3px -3px 5px inset var(--medium-grey),
+    3px 3px 5px inset var(--very-dark-blue);
+}
+
+.rating-form form input[type="button"]:hover {
+    background: var(--medium-grey);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.rating-form form input[type="button"]:active {
+    background: var(--orange);
+}
+
+.selected {
+    background: var(--orange) !important;
+    color: white !important;
+    box-shadow: -3px -3px 5px inset rgb(245, 217, 200),
+    3px 3px 5px inset rgb(110, 43, 2) !important;
+}
+
+
+.rating-form button[type="submit"] {
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    height: 46px;
+    width: 100%;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    box-shadow: -3px -3px 5px inset rgb(245, 217, 200),
+    3px 3px 5px inset rgb(110, 43, 2);
+}
+
+.rating-form button[type="submit"]:hover {
+    background: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+    box-shadow: -3px -3px 5px inset var(--light-grey),
+    3px 3px 5px inset var(--dark-blue);
+
+}
+
+.rating-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.rating-result picture {
+    padding-top: 12px;
+    padding-bottom: 14px;
+}
+
+.rating-result .badge {
+    display: flex;
+    align-items: center;
+    color: var(--real-orange);
+    background: var(--dark-blue);
+    height: 32px;
+    width: 192px;
+    padding-left: 20px;
+    padding-top: 3px;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-bottom: 22px;
+    box-shadow: -1px -1px 5px inset var(--medium-grey),
+    3px 3px 5px inset var(--very-dark-blue);
+}
+
+.rating-result h2 {
+    font-size: 1.7rem;
+    margin-left: 3px;
+    color: var(--white);
+}
+
+.rating-result p {
+    text-align: center;
+    line-height: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (width <= 500px){
+    main {
+        width: 100%;
+        max-width: 325px;
+        min-height: 360px;
+        height: 360px;
+        padding: 24px 24px 31px 24px;
+        border-radius: 15px;
+    }
+
+    .rating-form picture {
+        width: 39px;
+        height: 39px;
+    }
+
+    .rating-form picture img{
+        width: 13px;
+        height: 13px;
+    }
+
+    .rating-form h1 {
+        font-size: 1.48rem;
+        padding-top: 10px;
+        padding-bottom: 1px;
+    }
+
+    .rating-form p {
+        font-size: 14px;
+        line-height: 1.39rem;
+        padding-bottom: 16px;
+    }
+
+    .rating-form form {
+        gap: 7px;
+    }
+    
+    .rating-form form > div {
+        gap: 17.5px;
+        padding-bottom: 17px;
+        padding-top: 2px;
+    }
+
+    .rating-form form input[type="button"] {
+        width: 42px;
+        height: 42px;
+        font-weight: 700;
+        font-size: 13px;
+    }
+
+    /* Result Page */
+
+    .rating-result {
+        gap: 3px;
+    }
+    
+    .rating-result picture {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: -2px;
+    }
+
+    .rating-result picture img {
+        width: 146px;
+        padding-top: 12px;
+        padding-bottom: 14px;
+    }
+
+    .rating-result .badge {
+        height: 32px;
+        width: 170px;
+        padding-left: 12px;
+        padding-top: 4px;
+        margin-left: 0px;
+        margin-bottom: 25px;
+        box-shadow: none;
+    }
+
+    .rating-result .badge p {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+    }
+    
+    .rating-result h2 {
+        font-size: 1.45rem;
+        margin-left: 0px;
+        margin-bottom: 9px;
+    }
+
+    .rating-result p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
