@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <title>Pricing Component</title>
+
+</head>
+
+<body>
+
+  <main>
+    <h1>Our Pricing</h1>
+
+    <div class="price-selection">
+      <p>Annually</p>
+      <div id="toggle" class="toggle" data-toggle-value="monthly">
+        <div class="switch"></div>
+      </div>
+      <p>Monthly</p>
+    </div>
+
+    <div class="cards-container">
+      <section class="card">
+        <h3>Basic</h3>
+
+        <div class="price">
+          <span>&dollar;</span><p>19.99</p>
+          <span class="hidden">&dollar;</span><p class="hidden">199.99</p>
+        </div>
+
+        <div class="info">
+          <p>500 GB Storage</p>
+          <p>2 Users Allowed</p>
+          <p>Send up to 3 GB</p>
+        </div>
+
+        <button>Learn More</button>
+
+      </section>
+      <section class="card selected">
+        <h3>Professional</h3>
+
+        <div class="price">
+          <span>&dollar;</span><p>24.99</p>
+          <span class="hidden">&dollar;</span><p class="hidden">249.99</p>
+        </div>
+
+        <div class="info">
+          <p>1 TB Storage</p>
+          <p>5 Users Allowed</p>
+          <p>Send up to 10 GB</p>
+        </div>
+
+        <button class="btn-selected">Learn More</button>
+
+      </section>
+      <section class="card">
+        <h3>Master</h3>
+
+        <div class="price">
+          <span>&dollar;</span><p>39.99</p>
+          <span class="hidden">&dollar;</span><p class="hidden">399.99</p>
+        </div>
+
+        <div class="info">
+          <p>2 TB Storage</p>
+          <p>10 Users Allowed</p>
+          <p> Send up to 20 GB</p>
+        </div>
+
+        <button>Learn More</button>
+
+      </section>
+    </div>
+  </main>
+<script src="scripts.js"></script>
+</body>
+
+</html>
