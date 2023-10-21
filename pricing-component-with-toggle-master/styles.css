@@ -31,7 +31,7 @@ body {
 }
 
 main {
-
+    margin-top: -50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,6 +160,7 @@ button {
     font-size: 12px;
     letter-spacing: 2px;
     font-family: 'Montserrat', sans-serif;
+    transition: all .3s ease-in;
 
     &.btn-selected {
         background: white;
