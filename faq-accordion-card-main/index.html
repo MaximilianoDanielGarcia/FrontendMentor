@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <section class="image-container">
+      <picture>
+        <source media="(width <= 600px)" srcset="./images/illustration-woman-online-mobile.svg">
+        <img id="girl-image" src="./images/illustration-woman-online-desktop.svg" alt="A woman in front of an online desktop">
+        <img id="box-image" src="./images/illustration-box-desktop.svg" alt="A box's image">
+      </picture>
+    </section>
+    <section class="faq-container">
+      <h1>FAQ</h1>
+      <div class="accordion-container">
+        <button class="accordion">
+          How many team members can I invite?
+        </button>
+        <div class="panel">
+          You can invite up to 2 additional users on the Free plan. There is no limit on
+          team members for the Premium plan.
+        </div>
+        <button class="accordion">
+          What is the maximum file upload size?
+        </button>
+        <div class="panel">
+          No more than 2GB. All files in your account must fit your allotted storage space.
+        </div>
+        <button class="accordion">
+          How do I reset my password?
+        </button>
+        <div class="panel">
+          Click “Forgot password” from the login page or “Change password” from your profile page.
+          A reset link will be emailed to you.
+        </div>
+        <button class="accordion">
+          Can I cancel my subscription?
+        </button>
+        <div class="panel">
+          Yes! Send us a message and we’ll process your request no questions asked.
+        </div>
+        <button class="accordion">
+          Do you provide additional support?
+        </button>
+        <div class="panel">
+          Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
