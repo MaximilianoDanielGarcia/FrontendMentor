@@ -14,6 +14,17 @@ for (let i = 0; i < acc.length; i++) {
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
         } else {
+           
+            for (let index = 0; index < acc.length; index++) {
+           
+                let accordion = acc[index];
+                let panelNext = accordion.nextElementSibling;
+
+                accordion.classList.remove("active");
+                panelNext.style.maxHeight = null;   
+            }
+
+            this.classList.add("active");
             panel.style.maxHeight = panel.scrollHeight + paddingBottom + "px";
         }
     });
