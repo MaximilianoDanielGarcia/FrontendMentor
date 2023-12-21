@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;800;900&display=swap');
+
+:root {
+     /* Primary */
+
+    --yellow: hsl(47, 88%, 63%);
+
+     /* Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: 'Figtree';
+    font-size: 16px;
+    color: var(--grey);
+    background: var(--yellow);
+}
+
+main {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    width: 385px;
+    height: 522px;
+}
+  
+.inner-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.card:hover .inner-card {
+    transform: rotateY(180deg);
+}
+
+.front-card,
+.back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front-card, .back-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+    border-radius: 20px;
+    box-shadow: 8px 8px var(--black);
+    padding: 23px;
+    transform: rotateY(0deg);
+
+    & > img {
+        border-radius: 12px;
+        margin-bottom: 23px;
+        width: 100%;
+    }
+}
+
+.front-card:hover, .back-card:hover {
+    box-shadow: 12px 12px var(--black);
+}
+
+.category-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.badge {
+    background: var(--yellow);
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-bottom: 23px;
+
+    & > h2 {
+        margin-bottom: 3px;
+        cursor: pointer;
+    }
+
+    & > h2:hover {
+        color: var(--yellow);
+    }
+
+    & > P {
+        line-height: 24px;
+        color: var(--grey);
+        font-weight: 500;
+    }
+}
+
+.date {
+    font-size: 14px;
+    width: 100%;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.author-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 11.5px;
+
+    & > img {
+        width: 32px;
+    }
+
+    & > .author-name {
+        font-size: 14px;
+        font-weight: 800;
+    }
+}
+
+.back-card {
+    transform: rotateY(180deg);
+}
+
+@media screen and (width <= 600px) {
+    .card {
+        width: 325px;
+        height: 500px;
+    }
+
+    .front-card, .back-card {
+    
+        & > img {
+            min-height: 200px;
+            object-fit: cover;
+        }
+    }
+
+    .category-badge {
+        margin-bottom: 10px;
+    }
+
+    .badge {
+        padding: 6px 11.5px;
+        font-size: 12px;
+        font-weight: 900;
+        border-radius: 4px;
+        margin-top: 1px;
+    }
+
+    .date {
+        font-size: 11.8px;
+    }
+
+    article {
+        gap: 14.5px;
+        margin-bottom: 24px;
+    
+        & > h2 {
+            font-size: 20px;
+        }
+    
+        & > P {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+        }
+    }
+}
